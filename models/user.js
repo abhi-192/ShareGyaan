@@ -23,9 +23,9 @@ const userSchema = new mongoose.Schema({
     },
     question_id: {
         type: String
-    },{
-        timestamps: true
     }
+},{
+    timestamps: true
 });
 
 const User = mongoose.model('User',userSchema);
