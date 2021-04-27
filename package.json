@@ -1,0 +1,14 @@
+{
+  "name": "sharegyaan",
+  "version": "1.0.0",
+  "description": "\"A web application for asking questions, getting answers to your problems and increasing your knowledge.\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "abhi-192",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
