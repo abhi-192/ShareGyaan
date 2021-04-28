@@ -36,7 +36,7 @@ module.exports.ask  =function(req,res){
                     }
                     user.question_id.push(_id);
                 });
-                res.redirect('./question/question._id');
+                res.redirect('/question/question._id');
             });
         }
     });
@@ -46,7 +46,7 @@ module.exports.me = function(req,res){
 
     ///redirect to './users/questions/__'
 
-    let path = './users/questions/' + req.body._id;
+    let path = '/users/questions/' + req.body._id;
     res.redirect(path);
 }
 
