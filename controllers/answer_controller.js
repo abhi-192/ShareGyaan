@@ -36,3 +36,23 @@ module.exports.add = function(req,res){
     });
 
 }
+
+module.exports.comment = function(req,res){
+    //check if user is logged in or not
+
+    Answer.findById({_id:req.body.answer_id},function(err,answer){
+        if(err){
+            console.log("ERROR: invalid comment entry no such answer exists");
+            return;
+        }
+        Comment.create(req.body,function(err,comment){
+            if(err){
+                console.log("ERROR: unable to create new comment entry");
+                return;
+            }
+            answer.comment_id.push(comment._id);
+            let path = "/answer/"+answer._id;
+            return res.redirect(path);
+        })
+    });
+}
