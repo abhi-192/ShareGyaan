@@ -1,6 +1,8 @@
 const Answer = require("../models/answer");
 const Question = require("../models/question");
 const User = require("../models/user");
+const Comment = require("../models/comment");
+
 
 module.exports.me = function(req,res){
     //redirect to '/users/answers/__'

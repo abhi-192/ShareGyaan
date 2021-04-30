@@ -6,8 +6,8 @@ const answerController = require('../controllers/answer_controller');
 
 router.get('/me',answerController.me);
 
-router.get('/add',answerController.add);
+router.post('/add',answerController.add);
 
-router.get('/comment',answerController.comment);
+router.post('/comment',answerController.comment);
 
 module.exports = router;
